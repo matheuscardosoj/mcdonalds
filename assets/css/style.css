@@ -273,3 +273,9 @@ footer {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .caixa__produtos {
+    grid-template-columns: 70%;
+  }
+}
