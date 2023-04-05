@@ -191,7 +191,7 @@ main .caixa__sobre p {
   background: var(--cor-de-fundo-sec);
 }
 
-.botao__mais:hover {
+.botao__mais:hover, .botao-subir a:hover {
   cursor: pointer;
   background: var(--cor-botao);
 }
@@ -275,6 +275,10 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  .botao-subir {
+    right: 1.5%;
+  }
+
   .caixa__produtos {
     grid-template-columns: 70%;
   }

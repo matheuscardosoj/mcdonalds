@@ -1,10 +1,8 @@
-var botao = document.querySelector('.botao__mais')
+var botaoMais = document.querySelector('.botao__mais')
 var botaoSubir = document.getElementsByClassName('botao-subir')[0]
 var produtos = document.querySelectorAll('.produtos--mais')
 var menuHamburguer = document.querySelector('.cabecalho__icone-menu-hamburguer')
 var menuResponsivo = document.querySelector('.cabecalho__menu-responsivo')
-var linksMenuResponsivo = document.querySelectorAll('.cabecalho__menu-responsivo ul a')
-var scrollar = false
 var visivel = false
 
 function verificaScroll() {
@@ -15,7 +13,7 @@ function verificaScroll() {
     }
 }
 
-function modificar() {
+function modificarVisibilidade() {
     if(visivel) { //Diminuir
         for (let i = 0; i < produtos.length; i++) {
             produtos[i].classList.remove('crescer')
@@ -27,7 +25,7 @@ function modificar() {
             }, 300)  
             
         }    
-        botao.innerHTML = 'Ver mais'
+        botaoMais.innerHTML = 'Ver mais'
         visivel = false           
     }
         
@@ -37,17 +35,9 @@ function modificar() {
             produtos[i].style.display = 'flex' 
         }
         
-        botao.innerHTML = 'Mostrar menos'
+        botaoMais.innerHTML = 'Mostrar menos'
         visivel = true
     }
-}
-
-function clicar() {
-    var clickAudio  = document.createElement('audio')
-    clickAudio.src = 'assets/audio/click.mp3'
-
-    clickAudio.currentTime = 0
-    clickAudio.play()
 }
 
 menuHamburguer.addEventListener('click', () => {
@@ -64,25 +54,10 @@ menuResponsivo.addEventListener('click', () => {
     menuResponsivo.style.display = 'none'
 })
 
-botao.addEventListener('click',() => {
-    modificar()
-    clicar()
+botaoMais.addEventListener('click',() => {
+    modificarVisibilidade()
 } )
-
-botaoSubir.addEventListener('click', () => {
-    clicar()
-})
-
-menuResponsivo.addEventListener('click', () => {
-    clicar()
-})
-
-menuHamburguer.addEventListener('click', () => {
-    clicar()
-})
 
 window.onscroll = () => {
     verificaScroll()
 }
-
-
