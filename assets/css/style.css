@@ -64,13 +64,17 @@ body {
   cursor: pointer;
 }
 
+.cabecalho__icone-menu-hamburguer img {
+  height: 40px;
+}
+
 .cabecalho__menu-responsivo {
   display: none;
   flex-direction: column;
   row-gap: 15px;
   position: absolute;
   right: 15px;
-  top: 110px;
+  top: 120px;
   background-color: white;
   width: 200px;
   border-radius: 10px;
@@ -258,16 +262,14 @@ footer {
   }
 
   .caixa__produtos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 50%;
   }
 
   .caixa__produtos #produtos__titulo--principal {
-    grid-column-end: 2;
+    grid-column-end: unset;
   }
 
   .caixa__produtos .container__cartao-produtos {
-    width: 60%;
+    width: 100%;
   }
 }
