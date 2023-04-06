@@ -169,6 +169,7 @@ main .caixa__sobre p {
 
 .caixa__produtos .produtos--mais {
   display: none;
+  overflow: hidden;
 }
 
 .caixa__produtos .produtos__titulo--hamburguer {
@@ -232,19 +233,19 @@ footer {
 
 @keyframes crescer {
   from {
-    transform: scale(0);
+    height: 0;
   }
   to {
-    transform: scale(1);
+    height: 100%;
   }
 }
 
 @keyframes diminuir {
   from {
-    transform: scale(1);
+    height: 100%;
   }
   to {
-    transform: scale(0);
+    height: 0;
   }
 }
 
