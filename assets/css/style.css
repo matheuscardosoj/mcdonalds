@@ -285,10 +285,6 @@ footer {
   .caixa__produtos {
     grid-template-columns: 65%;
   }
-
-  .botao-subir {
-    right: 1%;
-  }
 }
 
 @media screen and (max-width: 320px) {
@@ -298,6 +294,6 @@ footer {
   }
 
   .botao-subir {
-    right: 0.5%;
+    right: 1%;
   }
 }
