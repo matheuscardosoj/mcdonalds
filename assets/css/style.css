@@ -201,18 +201,23 @@ main .caixa__sobre p {
   position: fixed;
   top: 83%;
   right: 2%;
+  border-radius: 10px;
 }
 
 .botao-subir a {
-  height: 35px;
   padding: 10px;
   border-radius: 10px;
+  display: block;
   font-weight: bold;
   text-transform: uppercase;
   transition: 500ms;
   background: var(--cor-de-fundo-sec);
   color: black;
   text-decoration: none;
+}
+
+.botao-subir img {
+  height: 20px;
 }
 
 footer {
