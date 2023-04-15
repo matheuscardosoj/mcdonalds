@@ -1,9 +1,382 @@
-@import url(variaveis.css);
-@import url(tags.css);
-@import url(classes.css);
-@import url(cabecalho.css);
-@import url(degrade.css);
-@import url(sobre.css);
-@import url(produtos.css);
-@import url(rodape.css);
-@import url(responsivo.css);
+:root {
+  --cor-cabecalho: white;
+  --cor-de-fundo: rgb(245, 197, 125);
+  --cor-de-fundo-sec: rgb(255, 243, 226);
+  --cor-botao: #ffbc0d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background-image: url(../img/fundo.svg);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+@keyframes crescer {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes diminuir {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+
+.crescer {
+  animation: crescer 400ms ease-in-out;
+}
+
+.diminuir {
+  animation: diminuir 400ms ease-in-out;
+}
+
+.botao-subir {
+  position: fixed;
+  top: 83%;
+  right: 2%;
+  border-radius: 10px;
+}
+
+.cabecalho {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--cor-cabecalho);
+  align-items: center;
+}
+
+.cabecalho .cabecalho__menu {
+  display: flex;
+  align-items: center;
+}
+
+.cabecalho .cabecalho__menu ul {
+  display: flex;
+  column-gap: 5px;
+}
+
+.cabecalho .cabecalho__menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.cabecalho .cabecalho__menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.cabecalho .cabecalho__menu a:hover {
+  background: #ffb800;
+}
+
+.cabecalho__icone-menu-hamburguer {
+  display: none;
+  cursor: pointer;
+}
+
+.cabecalho__icone-menu-hamburguer img {
+  height: 40px;
+}
+
+.cabecalho__menu-responsivo {
+  display: none;
+  flex-direction: column;
+  row-gap: 15px;
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  top: 120px;
+  border: 1px solid rgb(185, 185, 185);
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  background-color: var(--cor-de-fundo-sec);
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.cabecalho__menu-responsivo a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.cabecalho__menu-responsivo a:hover {
+  background-color: var(--cor-botao);
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+
+.caixa__banner-propaganda {
+  position: relative;
+}
+
+.caixa__banner-propaganda .banner-propaganda__imagem {
+  width: 100%;
+  max-height: 1000px;
+}
+
+.banner-propaganda__botao {
+  right: 5%;
+  bottom: 15%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: var(--cor-cabecalho);
+}
+
+.banner-propaganda__botao:hover {
+  background-color: var(--cor-de-fundo-sec);
+}
+
+.banner-propaganda__botao a {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+
+.banner-propaganda__botao img {
+  height: 30px;
+}
+
+.secao {
+  background-color: var(--cor-de-fundo-sec);
+  width: 70%;
+  max-width: 1000px;
+  min-height: calc(100vh - 8rem);
+  padding: 3rem;
+  border: 1px solid rgb(185, 185, 185);
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.secao h2 {
+  text-shadow: -5px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.caixa__sobre {
+  padding: 4rem 0;
+}
+
+.caixa__sobre .secao {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.caixa__sobre .secao div {
+  display: flex;
+  margin: auto 0;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.caixa__sobre .secao p {
+  text-align: justify;
+  text-indent: 30px;
+}
+
+.caixa__produtos {
+  padding: 4rem 0;
+}
+
+.caixa__produtos .secao{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 60px;
+}
+
+.produtos__container {
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+  row-gap: 20px;
+  column-gap: 30px;
+  justify-content: center;
+}
+
+.caixa__produtos #produtos__titulo--principal {
+  text-align: center;
+  grid-column-end: span 2;
+}
+
+.produtos__cartao {
+  background-color: var(--cor-cabecalho);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border-radius: 5px;
+  transition: 600ms;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.produtos__cartao:hover {
+  transform: scale(1.03);
+}
+
+.produtos__cartao .produtos__titulo--hamburguer {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.produtos__cartao img {
+  border-radius: 5px;
+  width: auto;
+  height: 186px;
+}
+
+.produtos__cartao h3 {
+  text-transform: uppercase;
+}
+
+.produtos__cartao p {
+  text-align: justify;
+}
+
+.produtos--mais {
+  display: none;
+  overflow: hidden;
+}
+
+.caixa__botao {
+  display: block;
+  margin: 0 auto;
+  grid-column-end: span 2;
+}
+
+.botao__mais {
+  height: 35px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 500ms;
+  background: var(--cor-cabecalho);
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.botao__mais:hover {
+  cursor: pointer;
+  background: var(--cor-botao);
+}
+
+.botao-subir a {
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 500ms;
+  background: var(--cor-de-fundo-sec);
+  color: black;
+  border: 1px solid rgb(185, 185, 185);
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.botao-subir a:hover {
+  cursor: pointer;
+  background: var(--cor-botao);
+}
+
+.botao-subir img {
+  height: 20px;
+}
+
+footer {
+  border-top: 1px solid black;
+  padding: 4rem 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+footer iframe {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .cabecalho .cabecalho__menu {
+    display: none;
+  }
+
+  .cabecalho__icone-menu-hamburguer {
+    display: block;
+  }
+
+  .produtos__container {
+    grid-template-columns: 100%;
+  }
+
+  .caixa__produtos #produtos__titulo--principal {
+    grid-column-end: unset;
+  }
+
+  .caixa__botao {
+    grid-column-end: unset;
+  }
+
+  footer {
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+
+  footer iframe {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .secao, footer iframe{
+    width: 85%;
+  }
+}

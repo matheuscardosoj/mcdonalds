@@ -19,9 +19,8 @@
 
             <nav class="cabecalho__menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="formulario.html">Formulario</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
                 </ul>
             </nav>
 
@@ -29,54 +28,67 @@
 
             <nav class="cabecalho__menu-responsivo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="formulario.html">Formulario</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
                 </ul>
             </nav>
-            
         </header>
 
-        <div class="degrade"></div>
 
         <main>
             <div class="principal">
-                <article class="caixa__sobre">
-                    <h2>Sobre a empresa</h2>
-                    <p>McDonald's Corporation é a maior cadeia mundial de restaurantes de fast food de hambúrguer, servindo cerca de 68 milhões de clientes por dia em 119 países através de 37 mil pontos de venda. Com sede nos Estados Unidos, a empresa começou em 1940 como uma churrascaria operada por Richard e Maurice McDonald.</p>
-                </article>
+                <section class="caixa__banner-propaganda">
+                    <img class="banner-propaganda__imagem" src="https://mcdonalds.com.sv/img/promo3.png" alt="Banner de publicidade do delivery" class="banner-propaganda">
 
-                <section class="caixa__produtos">
-                    <h2 id="produtos__titulo--principal">Produtos vendidos</h2>
-
-                    <article class="container__cartao-produtos" id="hamburguer-1">
-                        <img src="assets/img/x-bacon.jpeg" alt="">
-                        <h3 class="produtos__titulo--hamburguer">X-Bacon</h3>
-                        <p>2 fatias de Bacon Fatias Double Smoked Seara Gourmet, 1 pão de hamburguer com gergelim cortado ao meio, Folhas de alface mimosa verde a gosto, Fatias de tomate a gosto, Cebola roxa em rodelas a gosto, 2 colheres de maionese, 1 Tradicional Burguer Seara Gourmet ao ponto, 2 fatias de queijo emmental</p>
-                    </article>
-
-                    <article class="container__cartao-produtos" id="hamburguer-2">
-                        <img src="assets/img/x-salada.jpeg" alt="">
-                        <h3 class="produtos__titulo--hamburguer">X-Salada</h3>
-                        <p>Pão de hambúrguer, um hambúrguer de carne bovina, alface, tomate, queijo, maionese, ketchup e mostarda.</p>
-                    </article>
-
-                    <article class="container__cartao-produtos produtos--mais" id="hamburguer-3">
-                        <img src="assets/img/x-chicken.png" alt="">
-                        <h3 class="produtos__titulo--hamburguer">X-Chicken</h3>
-                        <p>Pão com gergelim, dois deliciosos filés de peito de frango empanado, cheddar fatiado, maionese e alface. É de dar água na boca!</p>
-                    </article>
+                    <button class="banner-propaganda__botao"><a href="#"><img src="https://www.mcdonalds.com.br/uploads/79_15_1_icone_70x70_bf9839ed7c.png" alt=""><span>Peça seu Méqui</span></a></button>
                 </section>
 
-                <div class="caixa__botao">
-                    <button class="botao__mais">Ver mais</button>
-                </div>
+                <section class="caixa__sobre" id="sobre">
+                    <div class="secao" >
+                        <h2>Sobre o Mc Donald's</h2>
+                        <div>
+                            <p>McDonald's Corporation é a maior cadeia mundial de restaurantes de fast food de hambúrguer, servindo cerca de 68 milhões de clientes por dia em 119 países através de 37 mil pontos de venda. Com sede nos Estados Unidos, a empresa começou em 1940 como uma churrascaria operada por Richard e Maurice McDonald. Em 1948, eles reorganizaram seus negócios como uma hamburgueria que usava os princípios de uma linha de produção. O empresário Ray Kroc ingressou na empresa como franquiado em 1955. Em seguida, ele comprou a cadeia de restaurantes dos irmãos McDonald e expandiu a rede para todo o mundo.</p>
+                            <p>Um restaurante McDonald é operado por qualquer franqueado, filial ou pela própria corporação. A receita da McDonald's Corporation vem do aluguel, royalties e honorários pagos pelos franqueados, bem como das vendas em restaurantes operados pela empresa. Em 2012, a corporação teve uma receita anual de 27,5 bilhões de dólares e lucros de 5,5 bilhões. De acordo com um relatório de 2012 da BBC, o McDonald's é o segundo maior empregador privado do mundo, atrás apenas do Walmart, com 1,9 milhão de empregados, sendo que 1,5 milhão trabalha para franquias.</p>
+                            <p>O McDonald's vende principalmente hambúrgueres, cheeseburgers, frango, batatas fritas, itens de café, refrigerantes, milk shakes e sobremesas. Em resposta à evolução dos gostos dos consumidores, a empresa ampliou o seu menu para incluir saladas, peixes, wrap, smoothies e frutas.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="caixa__produtos" id="produtos">
+                    <div class="secao">
+                        <h2 id="produtos__titulo--principal">Produtos</h2>
+                        <div class="produtos__container">
+                            <article class="produtos__cartao" id="hamburguer-1">
+                                <img src="assets/img/x-bacon.jpeg" alt="">
+                                <h3 class="produtos__titulo--hamburguer">X-Bacon</h3>
+                                <p>2 fatias de Bacon Fatias Double Smoked Seara Gourmet, 1 pão de hamburguer com gergelim cortado ao meio, Folhas de alface mimosa verde a gosto, Fatias de tomate a gosto, Cebola roxa em rodelas a gosto, 2 colheres de maionese, 1 Tradicional Burguer Seara Gourmet ao ponto, 2 fatias de queijo emmental</p>
+                            </article>
+                            <article class="produtos__cartao" id="hamburguer-2">
+                                <img src="assets/img/x-salada.jpeg" alt="">
+                                <h3 class="produtos__titulo--hamburguer">X-Salada</h3>
+                                <p>Pão de hambúrguer, um hambúrguer de carne bovina, alface, tomate, queijo, maionese, ketchup e mostarda.</p>
+                            </article>
+                            <article class="produtos__cartao produtos--mais" id="hamburguer-3">
+                                <img src="assets/img/x-chicken.png" alt="">
+                                <h3 class="produtos__titulo--hamburguer">X-Chicken</h3>
+                                <p>Pão com gergelim, dois deliciosos filés de peito de frango empanado, cheddar fatiado, maionese e alface. É de dar água na boca!</p>
+                            </article>
+                        </div>
+                        <div class="caixa__botao">
+                            <button class="botao__mais">Ver mais</button>
+                        </div>
+                    </div>
+                </div>      
             </div>
 
             <button class="botao-subir"><a href="#header"><img src="assets/img/seta_cima.png" alt=""></a></button>
+
+            
         </main>
 
         <footer>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7654035.245630374!2d-54.089294246886965!3d-20.493026401002094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a914964e91%3A0x4206dc4a85d17c2c!2sMcDonald&#39;s!5e0!3m2!1spt-BR!2sbr!4v1681576242047!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             <address>
                 <p>Endereço: Rua do amarelinho, Rio de Janeiro - RJ</p>
                 <p>Telefone: (XX) 9XXXX-XXXX</p>
