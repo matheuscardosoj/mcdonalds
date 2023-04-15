@@ -202,6 +202,7 @@ h2 {
   text-align: center;
   display: flex;
   flex-direction: column;
+  row-gap: 60px;
   margin: 0 auto;
 }
 
